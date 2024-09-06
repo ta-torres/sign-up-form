@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    font-weight: 300;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.page {
+    background: #EAEDF0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 200px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    max-width: 64px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.content {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .intro {
+    padding: 20px;
+}
+
+.content .intro p {
+    font-weight: 500;
+    font-size: 1.8rem;
+    max-width: 45ch;
+}
+
+.content .intro p:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+.content .sign-up {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 10px;
+}
+
+.sign-up-form {
+    padding: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.sign-up-form legend {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.sign-up-form fieldset {
+    border: none;
+}
+
+.form-row label {
+    font-size: 1.6rem;
+}
+
+.required {
+    color: #D55C5F;
+    font-size: 1.6rem;
+}
+
+.required-message {
+    font-size: 1.4rem;
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'],
+.form-row input[type='tel'],
+.form-row input[type='password'] {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    width: 100%;
+    height: 60%;
+    font-family: inherit;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+input[type='text']:focus:invalid,
+input[type='email']:focus:invalid,
+input[type='tel']:focus:invalid,
+input[type='password']:focus:invalid {
+    border: 1px solid #D55C5F;
+    color: #D55C5F;
+    box-shadow: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #000;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    outline: none;
+}
+
+.form-row button {
+    margin: 20px 0 0 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #38ad6b;
+    appearance: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.form-row button:hover {
+    background-color: seagreen;
+}
+
+.content .footer {
+    padding: 20px;
+}
+
+.content .footer p {
+    max-width: 45ch;
+}
+
+@media only screen and (min-width: 961px) {
+    .page {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        min-height: 100vh;
+    }
+
+    .content {
+        flex: 2;
+    }
+
+    .header {
+        flex: 1;
+        justify-content: inherit;
+        align-items: inherit;
+        height: auto;
+    }
+
+    .logo {
+        top: 30%;
+    }
+
+    .content .intro {
+        width: 100%;
+    }
+
+    .content .intro p {
+        margin-left: 20px;
+    }
+
+    .content .sign-up {
+        border-radius: 0;
+    }
+
+    .sign-up-form {
+        width: 100%;
+        display: flex;
+    }
+
+    .sign-up-form fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 20px;
+        flex: 0 0 600px;
+    }
+
+    .sign-up-form .form-row {
+        flex-direction: row;
+        width: 33.3%;
+        margin-right: 50px;
+    }
+
+    .content .footer {
+        width: 100%;
+    }
+
+    .content .footer p {
+        margin-left: 20px;
+    }
+}

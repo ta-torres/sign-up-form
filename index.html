@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="page">
+        <div class="section header">
+            <div class="photo">
+                <img src="images/optical.webp" />
+            </div>
+            <div class="logo">
+                <img src="images/network-white.png" />
+                <h1>Cloudly</h1>
+            </div>
+        </div>
+        <div class="section content">
+            <div class="intro">
+                <p>Looking to boost efficiency and security with cloud computing? Our platform provides best-in-class
+                    solutions
+                    to help you streamline your workflow and improve user experience.</p>
+                <p>Sign up <em>now</em> to get started.</p>
+            </div>
+
+            <div class="sign-up">
+                <form action="#" method="get" class="sign-up-form">
+                    <fieldset>
+                        <legend>Let's do this!</legend>
+                        <div class="form-row">
+                            <label for="first-name">First name <span class="required">*</span></label>
+                            <input id="first-name" name="first-name" type="text" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="last-name">Last name <span class="required">*</span></label>
+                            <input id="last-name" name="last-name" type="text" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input id="email" name="email" type="email" placeholder="joe@example.com" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="phone">Phone number</label>
+                            <input id="phone" name="phone" type="tel" />
+                        </div>
+                        <div class="form-row">
+                            <label for="password">Password <span class="required">*</span></label>
+                            <input id="password" name="password" type="password" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="confirm-password">Confirm password <span class="required">*</span></label>
+                            <input id="confirm-password" name="confirm-password" type="password" required />
+                        </div>
+                        <div class="form-row">
+                            <button type="submit">Create account</button>
+                        </div>
+                        <div class="form-row">
+                            <p class="required-message"><span class="required">*</span> indicates required fields</p>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="footer">
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
